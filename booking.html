@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Trip - TripTrail</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+        <h2 class="logo"><a href="index.html">Trip Trail</a></h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Heading -->
+    <section class="page-heading">
+        <h1>Book Your Dream Trip</h1>
+        <p>Fill in your details and start planning your next adventure.</p>
+    </section>
+
+    <!-- Booking Form -->
+    <section class="booking-section">
+
+        <div class="booking-container">
+
+            <h2>Travel Booking Form</h2>
+            <p class="booking-description">
+                Enter your travel details below.
+            </p>
+
+            <form action="#" method="get">
+
+                <!-- Traveller Details -->
+                <fieldset>
+                    <legend>Traveller Details</legend>
+
+                    <div class="booking-form-grid">
+
+                        <div class="form-group">
+                            <label for="fullname">Full Name</label>
+                            <input type="text" id="fullname" name="fullname"
+                                   placeholder="Enter your full name"
+                                   autocomplete="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email"
+                                   placeholder="Enter your email"
+                                   autocomplete="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone"
+                                   placeholder="Enter your phone number"
+                                   autocomplete="tel" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="travellers">Number of Travellers</label>
+                            <select id="travellers" name="travellers" required>
+                                <option value="">Select travellers</option>
+                                <option value="1">1 Traveller</option>
+                                <option value="2">2 Travellers</option>
+                                <option value="3">3 Travellers</option>
+                                <option value="4">4 Travellers</option>
+                                <option value="5">5 or more Travellers</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </fieldset>
+
+                <!-- Trip Details -->
+                <fieldset>
+                    <legend>Trip Details</legend>
+
+                    <div class="booking-form-grid">
+
+                        <div class="form-group">
+                            <label for="destination">Choose Destination</label>
+                            <select id="destination" name="destination" required>
+                                <option value="">Select destination</option>
+                                <option value="bali">Bali, Indonesia</option>
+                                <option value="switzerland">Switzerland</option>
+                                <option value="paris">Paris, France</option>
+                                <option value="thailand">Thailand</option>
+                                <option value="rajasthan">Rajasthan, India</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="package">Choose Package</label>
+                            <select id="package" name="package" required>
+                                <option value="">Select package</option>
+                                <option value="budget">Budget Package</option>
+                                <option value="standard">Standard Package</option>
+                                <option value="premium">Premium Package</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="departure">Departure Date</label>
+                            <input type="date" id="departure"
+                                   name="departure" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="return">Return Date</label>
+                            <input type="date" id="return"
+                                   name="return" required>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="budget">Approximate Budget</label>
+                            <select id="budget" name="budget" required>
+                                <option value="">Select your budget</option>
+                                <option value="under15000">Below ₹15,000</option>
+                                <option value="15000-30000">₹15,000 - ₹30,000</option>
+                                <option value="30000-50000">₹30,000 - ₹50,000</option>
+                                <option value="above50000">Above ₹50,000</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="requests">Special Requests</label>
+                            <textarea id="requests" name="requests"
+                                      rows="5"
+                                      placeholder="Tell us about your travel preferences"></textarea>
+                        </div>
+
+                    </div>
+                </fieldset>
+
+                <!-- Terms and Conditions -->
+                <div class="terms">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">
+                        I confirm that the details entered are correct.
+                    </label>
+                </div>
+
+                <button type="submit" class="btn booking-btn">
+                    Submit Booking Request
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <h2>TripTrail</h2>
+        <p>Discover new places and create beautiful memories.</p>
+
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="destinations.html">Destinations</a>
+            <a href="packages.html">Packages</a>
+            <a href="blog.html">Travel Blog</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+
+        <p>&copy; 2026 TripTrail. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

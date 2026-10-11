@@ -1,0 +1,1172 @@
+/* ===== Basic setup ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #90E0EF;
+    color: #03045E;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button, input, select, textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* ===== Navigation bar ===== */
+
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(3, 4, 94, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 12px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+/* round logo icon in front of the name */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 26px;
+    font-weight: bold;
+    color: #03045E;
+}
+
+.logo::before,
+.login-container::before,
+.register-container::before {
+    content: "\2708\FE0E";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0077B6, #00B4D8);
+    color: #ffffff;
+    font-size: 20px;
+    box-shadow: 0 3px 10px rgba(0, 119, 182, 0.4);
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 6px 22px;
+}
+
+nav ul li a {
+    color: #03045E;
+    font-size: 14px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #0077B6;
+}
+
+/* ===== Footer ===== */
+
+footer {
+    background-color: #03045E;
+    color: #90E0EF;
+    text-align: center;
+    padding: 35px 20px;
+    margin-top: 60px;
+}
+
+footer h2 {
+    color: #00B4D8;
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 8px 0;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 24px;
+    margin: 15px 0;
+}
+
+.footer-links a:hover {
+    color: #00B4D8;
+}
+
+/* line above the "All rights reserved" text */
+footer p:last-child {
+    max-width: 1100px;
+    margin: 25px auto 0;
+    padding-top: 18px;
+    border-top: 1px solid rgba(144, 224, 239, 0.4);
+    font-size: 14px;
+}
+
+/* ===== Buttons ===== */
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    background-color: #0077B6;
+    color: #ffffff;
+    padding: 12px 24px;
+    border: 2px solid #0077B6;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #00B4D8;
+    border-color: #00B4D8;
+    color: #03045E;
+    transform: translateY(-2px);
+}
+
+/* ===== Home page ===== */
+
+.home {
+    min-height: 540px;
+    background:
+        linear-gradient(rgba(3, 4, 94, 0.72), rgba(3, 4, 94, 0.72)),
+        url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 70px 20px 130px;
+    color: #ffffff;
+}
+
+.home-content {
+    max-width: 850px;
+}
+
+.home h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    color: #90E0EF;
+}
+
+.home p {
+    font-size: 18px;
+    margin-bottom: 28px;
+}
+
+/* search box sits over the bottom of the hero image */
+.search {
+    position: relative;
+    width: min(900px, calc(100% - 40px));
+    margin: -60px auto 0;
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(3, 4, 94, 0.25);
+}
+
+.search h2 {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 16px;
+}
+
+.search form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.search input,
+.search select,
+.search button {
+    flex: 1;
+    min-width: 150px;
+    padding: 12px;
+    border: 1px solid #0077B6;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.search button {
+    background-color: #0077B6;
+    color: #ffffff;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.search button:hover {
+    background-color: #00B4D8;
+    border-color: #00B4D8;
+    color: #03045E;
+}
+
+/* ===== Page headings ===== */
+
+.page-heading {
+    text-align: center;
+    padding: 55px 20px;
+    background-color: #03045E;
+}
+
+.page-heading h1 {
+    font-size: 36px;
+    color: #90E0EF;
+    margin-bottom: 10px;
+}
+
+.page-heading p {
+    max-width: 750px;
+    margin: auto;
+    color: #ffffff;
+}
+
+/* section titles */
+.destinations h2,
+.packages h2,
+.blog h2,
+.why-us h2,
+.reviews h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.destinations > p,
+.packages > p,
+.blog > p {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 35px;
+}
+
+/* ===== Destinations ===== */
+
+.destinations,
+.packages,
+.blog {
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 25px;
+}
+
+.destination-container,
+.package-container,
+.blog-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.destination-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border: 1px solid #90E0EF;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(3, 4, 94, 0.12);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.destination-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(3, 4, 94, 0.2);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.destination-card h3 {
+    padding: 18px 20px 0;
+    margin-bottom: 8px;
+    color: #0077B6;
+}
+
+.destination-card p {
+    padding: 0 20px;
+    margin-bottom: 10px;
+}
+
+/* button or link stays at the bottom of every card */
+.destination-card > a {
+    margin: auto 20px 20px;
+    align-self: flex-start;
+}
+
+.destination-card > a:not(.btn) {
+    color: #0077B6;
+    font-weight: bold;
+}
+
+.destination-card > a:not(.btn):hover {
+    color: #00B4D8;
+    text-decoration: underline;
+}
+
+.text-link {
+    color: #0077B6;
+    font-weight: bold;
+}
+
+.text-link:hover {
+    color: #00B4D8;
+    text-decoration: underline;
+}
+
+/* ===== Why choose us ===== */
+
+.why-us {
+    background-color: #CAF0F8;
+    padding: 55px 25px;
+    text-align: center;
+}
+
+.why-us > p {
+    max-width: 650px;
+    margin: 0 auto 25px;
+}
+
+.features,
+.review-container {
+    max-width: 1100px;
+    margin: 30px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.features > div,
+.review-container > div {
+    background-color: #ffffff;
+    border: 1px solid #90E0EF;
+    padding: 28px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(3, 4, 94, 0.12);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.features > div:hover,
+.review-container > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 30px rgba(3, 4, 94, 0.2);
+}
+
+.features h3,
+.review-container h3 {
+    color: #0077B6;
+    margin-bottom: 8px;
+}
+
+/* ===== Reviews ===== */
+
+.reviews {
+    padding: 55px 25px;
+    text-align: center;
+}
+
+.review-container {
+    margin-top: 0;
+}
+
+.review-container p {
+    font-style: italic;
+    margin-bottom: 14px;
+}
+
+.review-container h3 {
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+/* ===== Packages ===== */
+
+.package-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border: 1px solid #90E0EF;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 14px rgba(3, 4, 94, 0.12);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.package-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 30px rgba(3, 4, 94, 0.2);
+}
+
+.package-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 18px;
+}
+
+.package-card h3 {
+    color: #0077B6;
+    font-size: 22px;
+    margin-bottom: 4px;
+}
+
+.package-card p {
+    margin-bottom: 12px;
+}
+
+.price {
+    color: #0077B6;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.price span {
+    font-size: 14px;
+    font-weight: normal;
+    color: #03045E;
+}
+
+.package-card ul {
+    list-style: none;
+    margin: 10px 0 24px;
+}
+
+.package-card li {
+    padding: 8px 0;
+    border-bottom: 1px solid #90E0EF;
+}
+
+.package-card li::before {
+    content: "\2713  ";
+    color: #0077B6;
+    font-weight: bold;
+}
+
+.package-card .btn {
+    margin-top: auto;
+}
+
+.popular {
+    border: 2px solid #00B4D8;
+}
+
+.badge {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    background-color: #00B4D8;
+    color: #03045E;
+    padding: 5px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* ===== Blog ===== */
+
+.blog-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border: 1px solid #90E0EF;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(3, 4, 94, 0.12);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 30px rgba(3, 4, 94, 0.2);
+}
+
+.blog-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.blog-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 20px;
+}
+
+.blog-content h3 {
+    margin: 10px 0;
+    color: #0077B6;
+}
+
+.blog-content p {
+    margin-bottom: 15px;
+}
+
+.blog-content .text-link {
+    margin-top: auto;
+}
+
+.blog-content .blog-category {
+    align-self: flex-start;
+    background-color: #90E0EF;
+    padding: 4px 12px;
+    margin-bottom: 0;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* newsletter */
+.newsletter {
+    width: min(1150px, calc(100% - 50px));
+    margin: 20px auto 0;
+    background-color: #CAF0F8;
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(3, 4, 94, 0.12);
+}
+
+.newsletter h2 {
+    margin-bottom: 10px;
+}
+
+.newsletter p {
+    margin-bottom: 20px;
+}
+
+.newsletter form {
+    display: flex;
+    max-width: 500px;
+    margin: auto;
+    gap: 10px;
+}
+
+.newsletter input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #0077B6;
+    border-radius: 8px;
+}
+
+/* ===== Form fields (booking + contact) ===== */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #0077B6;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #03045E;
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: 2px solid #00B4D8;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.terms {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.terms input,
+.register-container .terms input {
+    width: auto;
+    margin-top: 6px;
+}
+
+.register-container .terms label {
+    font-weight: normal;
+    font-size: 14px;
+}
+
+/* ===== Booking ===== */
+
+.booking-section {
+    padding: 50px 20px;
+}
+
+.booking-container {
+    max-width: 850px;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 35px;
+    border: 1px solid #90E0EF;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(3, 4, 94, 0.15);
+}
+
+.booking-container h2 {
+    margin-bottom: 8px;
+}
+
+.booking-description {
+    margin-bottom: 25px;
+}
+
+.booking-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+fieldset {
+    border: 1px solid #0077B6;
+    padding: 22px 18px 18px;
+    border-radius: 8px;
+    min-width: 0;
+}
+
+fieldset + fieldset {
+    margin-top: 25px;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 8px;
+}
+
+.booking-btn {
+    margin-top: 25px;
+    width: 100%;
+}
+
+/* ===== Contact ===== */
+
+.contact-section {
+    padding: 50px 25px;
+}
+
+.contact-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+}
+
+.contact-info,
+.contact-form {
+    background-color: #ffffff;
+    border: 1px solid #90E0EF;
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(3, 4, 94, 0.12);
+}
+
+.contact-info h2,
+.contact-form h2 {
+    margin-bottom: 20px;
+}
+
+.contact-info > p {
+    margin-bottom: 25px;
+}
+
+.contact-item {
+    margin-bottom: 20px;
+}
+
+.contact-item h3 {
+    color: #0077B6;
+    font-size: 17px;
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+    margin-top: 25px;
+    color: #0077B6;
+    font-weight: bold;
+}
+
+.social-links h3 {
+    width: 100%;
+    color: #03045E;
+    font-size: 17px;
+}
+
+.social-links a:hover {
+    color: #00B4D8;
+    text-decoration: underline;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact-form .btn {
+    align-self: flex-start;
+}
+
+/* FAQ */
+.faq-section {
+    padding: 40px 25px 0;
+}
+
+.faq-section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.faq-container {
+    max-width: 850px;
+    margin: auto;
+}
+
+.faq-container details {
+    background-color: #ffffff;
+    padding: 18px 20px;
+    border: 1px solid #90E0EF;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    box-shadow: 0 4px 14px rgba(3, 4, 94, 0.12);
+}
+
+.faq-container summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: #0077B6;
+}
+
+.faq-container details p {
+    margin-top: 10px;
+}
+
+/* ===== Login and register ===== */
+
+.login-section,
+.register-section {
+    padding: 40px 20px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container,
+.register-container {
+    width: 100%;
+    max-width: 480px;
+    background-color: #ffffff;
+    border: 1px solid #90E0EF;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(3, 4, 94, 0.15);
+}
+
+/* bubbles in the background (made with ::before and ::after) */
+.login-section,
+.register-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.login-section::before,
+.register-section::before,
+.login-section::after,
+.register-section::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.9), rgba(0, 180, 216, 0.35));
+    box-shadow: inset -8px -8px 20px rgba(0, 119, 182, 0.2);
+    animation: float 6s ease-in-out infinite;
+}
+
+/* big bubble, top left */
+.login-section::before,
+.register-section::before {
+    width: 320px;
+    height: 320px;
+    top: -90px;
+    left: -90px;
+}
+
+/* medium bubble, bottom right */
+.login-section::after,
+.register-section::after {
+    width: 220px;
+    height: 220px;
+    bottom: -60px;
+    right: -60px;
+    animation-delay: 2s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* card stays above the bubbles */
+.login-container,
+.register-container {
+    position: relative;
+    z-index: 1;
+}
+
+/* bigger logo on top of the card */
+.login-container::before,
+.register-container::before {
+    width: 58px;
+    height: 58px;
+    font-size: 28px;
+    margin: 0 auto 16px;
+}
+
+.login-container h1,
+.register-container h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.login-description,
+.register-description {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.login-container form,
+.register-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.login-container label,
+.register-container label {
+    font-weight: bold;
+}
+
+.login-container input,
+.register-container input,
+.register-container select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #0077B6;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #03045E;
+}
+
+.login-container input:focus,
+.register-container input:focus,
+.register-container select:focus {
+    outline: 2px solid #00B4D8;
+}
+
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.login-options label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-weight: normal;
+}
+
+.login-container .login-options input {
+    width: auto;
+}
+
+.login-options a {
+    color: #0077B6;
+    font-weight: bold;
+}
+
+.login-btn,
+.register-btn {
+    width: 100%;
+}
+
+.register-link,
+.login-link,
+.back-home {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.register-link a,
+.login-link a,
+.back-home a {
+    color: #0077B6;
+    font-weight: bold;
+}
+
+.login-options a:hover,
+.register-link a:hover,
+.login-link a:hover,
+.back-home a:hover {
+    color: #00B4D8;
+    text-decoration: underline;
+}
+
+/* ===== Tablet ===== */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav ul {
+        justify-content: center;
+        gap: 6px 16px;
+    }
+
+    .destination-container,
+    .package-container,
+    .blog-container,
+    .features,
+    .review-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* a single card left on the last row goes to the centre */
+    .destination-container > :last-child:nth-child(odd),
+    .package-container > :last-child:nth-child(odd),
+    .features > :last-child:nth-child(odd),
+    .review-container > :last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+        width: calc(50% - 14px);
+        justify-self: center;
+    }
+
+    .home h1 {
+        font-size: 38px;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== Mobile ===== */
+
+@media (max-width: 600px) {
+
+    /* nav links are hidden on mobile, only the logo stays */
+    nav ul {
+        display: none;
+    }
+
+    .navbar {
+        justify-content: center;
+        padding: 12px 15px;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .home {
+        min-height: 460px;
+        padding: 50px 15px 110px;
+    }
+
+    .home h1 {
+        font-size: 30px;
+    }
+
+    .home p {
+        font-size: 15px;
+    }
+
+    .search {
+        padding: 18px;
+        margin-top: -50px;
+    }
+
+    .search form {
+        flex-direction: column;
+    }
+
+    .search input,
+    .search select,
+    .search button {
+        flex: none;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .page-heading {
+        padding: 40px 15px;
+    }
+
+    .page-heading h1 {
+        font-size: 28px;
+    }
+
+    .destinations,
+    .packages,
+    .blog {
+        padding: 35px 15px;
+    }
+
+    .destinations h2,
+    .packages h2,
+    .blog h2,
+    .why-us h2,
+    .reviews h2 {
+        font-size: 25px;
+    }
+
+    .destination-container,
+    .package-container,
+    .blog-container,
+    .features,
+    .review-container {
+        grid-template-columns: 1fr;
+    }
+
+    .destination-container > :last-child:nth-child(odd),
+    .package-container > :last-child:nth-child(odd),
+    .features > :last-child:nth-child(odd),
+    .review-container > :last-child:nth-child(odd) {
+        grid-column: auto;
+        width: auto;
+        justify-self: stretch;
+    }
+
+    .package-container {
+        gap: 38px;
+    }
+
+    .destination-card img,
+    .blog-card img {
+        height: 200px;
+    }
+
+    .newsletter form {
+        flex-direction: column;
+    }
+
+    .booking-container {
+        padding: 22px;
+    }
+
+    .booking-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: auto;
+    }
+
+    .contact-info,
+    .contact-form {
+        padding: 22px;
+    }
+
+    .contact-form .btn {
+        align-self: stretch;
+    }
+
+    .login-section,
+    .register-section {
+        padding: 30px 15px;
+    }
+
+    .login-section::before,
+    .register-section::before {
+        width: 200px;
+        height: 200px;
+    }
+
+    .login-section::after,
+    .register-section::after {
+        width: 140px;
+        height: 140px;
+    }
+
+    .login-container,
+    .register-container {
+        padding: 24px;
+    }
+
+    footer {
+        padding: 28px 15px;
+    }
+}
