@@ -8,7 +8,6 @@
 </head>
 <body>
 
-
     <!-- Registration Section -->
     <main class="register-section">
 
@@ -19,109 +18,18 @@
                 Join TripTrail and start planning your next adventure.
             </p>
 
-            <form action="#" method="get">
-
-                <!-- Full Name -->
-                <div class="form-group">
-                    <label for="fullname">Full Name</label>
-                    <input
-                        type="text"
-                        id="fullname"
-                        name="fullname"
-                        placeholder="Enter your full name"
-                        autocomplete="name"
-                        required>
-                </div>
-
-                <!-- Email -->
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="Enter your email address"
-                        autocomplete="email"
-                        required>
-                </div>
-
-                <!-- Phone -->
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        placeholder="Enter your phone number"
-                        autocomplete="tel"
-                        required>
-                </div>
-
-                <!-- Gender -->
-                <div class="form-group">
-                    <label for="gender">Gender (Optional)</label>
-                    <select id="gender" name="gender">
-                        <option value="">Select gender</option>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                        <option value="other">Other</option>
-                        <option value="prefer-not-to-say">
-                            Prefer not to say
-                        </option>
-                    </select>
-                </div>
-
-                <!-- Password -->
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input
-                        type="password"
-                        id="password"
-                        name="password"
-                        placeholder="Create a password"
-                        autocomplete="new-password"
-                        minlength="8"
-                        required>
-                </div>
-
-                <!-- Confirm Password -->
-                <div class="form-group">
-                    <label for="confirm-password">Confirm Password</label>
-                    <input
-                        type="password"
-                        id="confirm-password"
-                        name="confirm-password"
-                        placeholder="Re-enter your password"
-                        autocomplete="new-password"
-                        minlength="8"
-                        required>
-                </div>
-
-                <!-- Terms and Conditions -->
-                <div class="terms">
-                    <input
-                        type="checkbox"
-                        id="terms"
-                        name="terms"
-                        required>
-
-                    <label for="terms">
-                        I agree to the Terms and Conditions.
-                    </label>
-                </div>
-
-                <!-- Register Button -->
-                <button type="submit" class="btn register-btn">
-                    Create Account
-                </button>
-
-            </form>
-
-            <!-- Login Link -->
-            <p class="login-link">
-                Already have an account?
-                <a href="login.html">Login Here</a>
-            </p>
+            <div style="background-color: #e8f4f8; border: 2px solid #0066cc; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                <p style="color: #0066cc; font-weight: bold; margin: 0;">ℹ️ Demo Notice</p>
+                <p style="margin: 10px 0 0 0;">This is a prototype website. Registration functionality requires a backend server and secure authentication.</p>
+                <p style="margin: 10px 0 0 0;">A real registration flow should include:</p>
+                <ul style="margin: 10px 0; padding-left: 20px;">
+                    <li>HTTPS</li>
+                    <li>Password hashing (bcrypt/Argon2)</li>
+                    <li>Database storage</li>
+                    <li>Email verification</li>
+                    <li>Privacy protection & secure handling of personal data</li>
+                </ul>
+            </div>
 
             <div class="back-home">
                 <a href="index.html">← Back to Home</a>
@@ -130,8 +38,6 @@
         </div>
 
     </main>
-
-   
 
 </body>
 </html>
