@@ -22,5 +22,5 @@ TripTrail is a responsive travel website front end built with pure HTML and CSS.
 - CSS3 (Flexbox and Grid)
 
 ## Run locally
-1. Clone the repo: `git clone https://github.com/<your-username>/triptrail.git`
+1. Clone the repo: `git clone https://github.com/bala1868/triptrail.git`
 2. Open `index.html` in your browser.
